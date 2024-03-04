@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Maximum of Three Numbers</title>
+    <style>
+        /* Define the background color for the body */
+        body {
+            background-color: blue;
+        }
+    </style>
+    <script>
+
+        function findMaximum() {
+            // Prompt for three inputs and convert to numbers
+            var num1 = parseFloat(prompt("Enter the first number:"));
+            var num2 = parseFloat(prompt("Enter the second number:"));
+            var num3 = parseFloat(prompt("Enter the third number:"));
+
+            // Pass numbers to the function and find the maximum
+            const max = getMax(num1, num2, num3);
+
+            // Display the result in the UI
+            document.getElementById("result").innerText = "The maximum of the three numbers is: " + max;
+        }
+
+        function getMax(a, b, c) {
+            // Use Math.max to find the maximum
+            return Math.max(a, b, c);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="findMaximum()">Find Maximum</button>
+    <p id="result"></p>
+</body>
+</html>
